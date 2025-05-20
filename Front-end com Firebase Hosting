@@ -1,0 +1,122 @@
+# Estação Meteorológica IoT - Front-end com Firebase Hosting
+
+Este repositório contém o front-end de uma estação meteorológica baseada em ESP32 e Firebase. O sistema coleta dados como temperatura, umidade, velocidade do vento e chuva, e os exibe em tempo real via página web.
+
+---
+
+## ✅ Requisitos
+
+* Conta no Firebase com um projeto criado
+* Node.js instalado [https://nodejs.org](https://nodejs.org)
+* Firebase CLI instalado
+
+```bash
+npm install -g firebase-tools
+firebase login
+```
+
+---
+
+## 📁 Estrutura do Projeto
+
+```
+estacao-frontend/
+├── public/
+│   └── index.html   <- Interface web conectada ao Firebase
+├── firebase.json    <- Configuração do Firebase Hosting
+└── README.md
+```
+
+---
+
+## 🚀 Como hospedar no Firebase Hosting
+
+### 1. Inicialize o projeto
+
+Crie a pasta e inicialize o hosting:
+
+```bash
+mkdir estacao-frontend
+cd estacao-frontend
+firebase init hosting
+```
+
+**Durante o setup:**
+
+* Escolha seu projeto existente no Firebase
+* Defina o diretório público como `public`
+* Responda `Não` para configurção de SPA e sobrescrever `index.html`
+
+### 2. Adicione o HTML
+
+Salve o código gerado da interface no arquivo:
+
+```bash
+public/index.html
+```
+
+### 3. Faça o deploy
+
+```bash
+firebase deploy
+```
+
+Após isso, será exibida a URL do seu painel hospedado:
+
+```
+https://SEU_PROJETO.firebaseapp.com
+```
+
+---
+
+## 🔐 Regras de segurança do Realtime Database
+
+No Firebase Console > Realtime Database > Regras:
+
+```json
+{
+  "rules": {
+    "sensores": {
+      ".read": true,
+      ".write": false
+    }
+  }
+}
+```
+
+---
+
+## 📡 Firebase Database esperado
+
+O ESP32 deve publicar os dados no seguinte formato:
+
+```json
+{
+  "sensores": {
+    "temperatura": 25.6,
+    "umidade": 60.2,
+    "vento": 10.3,
+    "chuva": "Sim"
+  }
+}
+```
+
+---
+
+## 📦 Dependências usadas
+
+* [Firebase JS SDK 9.x](https://firebase.google.com/docs/web/setup)
+
+---
+
+## 📈 Melhorias futuras
+
+* Gráficos em tempo real com Chart.js
+* Autenticação por usuário
+* Dashboard responsivo com Tailwind CSS
+
+---
+
+## 🔧 Suporte
+
+Para dúvidas técnicas, consulte a [documentação oficial do Firebase](https://firebase.google.com/docs/hosting)
