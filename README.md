@@ -4,8 +4,8 @@ Este projeto visa desenvolver um sistema de monitoramento de temperatura  via es
 
 ## Funcionalidades:
 * [x] Controlde e monitoramento da estação;
-* [x] Envio dos dados coletados pela estação para banco de dados.
-* [x] Visualização dos dados climatológicos e do tempo de irrigação ativo
+* [x] Envio dos dados coletados pela estação para banco de dados;
+* [x] Visualização dos dados climatológico;
 
 
 O projeto possui diversas melhorias, implementando cada vez mais novos recursos. 
@@ -14,7 +14,7 @@ O projeto possui diversas melhorias, implementando cada vez mais novos recursos.
 
 * ESP32 
 * Anemômetro
-* Módulo Sensor de Luminosidade TEMT600
+* Sensor de chuva YL-83
 * Sensor de Pressão, Temperatura e altitude BME280
 
 ## Software 
@@ -28,14 +28,11 @@ O firmware é compilado usando o Arduino IDE e os softwares de envio de dados s�
 * `Adafruit_BME280.h`: Manipulação do sensor BME280
 
 ### Aplicação
-A interface é construida em python, para isso, ela utiliza algumas bibliotecas que permitem o seu desenvolvimento, nas quais incluem:
 
-* `flet`: Construção da interface
-* `pyrebase4`: Comunicação com o Firebase
 
 ## Modo de Funcionamento 
 
-
 1. Funcionando continuamente, onde os sensores realizam medições dos parâmetros necessários;
 2. Os dados são enviados para um servidor (Firebase) com um intervalo programado;
-3. A PWA tem acesso ao Firebase, onde os dados são exibidos
+3. Interface Web tem acesso ao Firebase, onde os dados são exibidos.
+4. Comunicação com SinricPro para automacao residencial.
