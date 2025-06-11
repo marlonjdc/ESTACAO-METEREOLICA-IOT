@@ -10,18 +10,18 @@
 
 // Wi-Fi
 #define WIFI_SSID "AP102"
-#define WIFI_PASSWORD "clubedovanz"
+#define WIFI_PASSWORD "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 
 // Firebase
-#define API_KEY "AIzaSyCvgNmCZSANT6ibuDWzOXsQ5i1RHBbLTic"
-#define DATABASE_URL "https://estacaomarlon-default-rtdb.firebaseio.com/"
+#define API_KEY "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+#define DATABASE_URL "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 #define USER_EMAIL "estacaomarlon@estacaomarlon.com.br"
-#define USER_PASSWORD "estacaomarlon"
+#define USER_PASSWORD "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 
 // SinricPRO
-#define APP_KEY           "dd848a3f-e7ab-4ba7-8611-a45c0bb7bf38"
-#define APP_SECRET        "5c82aa86-cca5-4d79-b1ce-97d0728ae1a2-70e061de-4da5-4248-95fb-501e079df3a8"
-#define TEMP_SENSOR_ID    "68253388947cbabd201ac64b"
+#define APP_KEY           "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+#define APP_SECRET        "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+#define TEMP_SENSOR_ID    "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 
 // Sensores
 #define RAIN_SENSOR_PIN     8
